@@ -36,6 +36,7 @@
     <Compile Include="Math\Calculator.cs" />
     <Compile Include="PrimitiveDataTypes.cs" />
     <Compile Include="Season.cs" />
+    <Compile Include="Conditionals.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Math\" />

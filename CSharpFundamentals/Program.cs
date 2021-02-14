@@ -7,54 +7,85 @@ namespace CSharpFundamentals
     {
         public static void Main(string[] args)
         {
-            //switch statement
-            var season = Season.Autumn;
-            switch (season)
+            /* 
+             Write a program and ask the user to enter a number. The number
+             should be between 1 to 10. If the user enters a valid number,
+             display "Valid" on the console. Otherwise, display "Invalid".
+            */
+            Console.WriteLine("Please enter a number between 1 & 10: ");
+            int input = Int32.Parse(Console.ReadLine());
+            if (input <= 0 || input <= 10)
             {
-                case Season.Autumn:
-                    Console.WriteLine("It's autumn and a beautiful season.");
-                    break;
-                case Season.Spring:
-                    Console.WriteLine("It's spring and a I am ready for summer.");
-                    break;
-                case Season.Summer:
-                    Console.WriteLine("It's summer! Let's go to the beach.");
-                    break;
-                default:
-                    Console.WriteLine("Winter! Maybe it will snow.");
-                    break;
+                Console.WriteLine("Valid");
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
             }
 
-            //conditional statements
-            //bool isGoldCustomer = true;
+            /*
+             Write a program which takes two numbers from the console and
+             displays the maximum of the two.
+            */
+            Console.WriteLine("Please enter a number: ");
+            int input1 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter another number: ");
+            int input2 = Int32.Parse(Console.ReadLine());
+            if (input1 < input2)
+            {
+                Console.WriteLine("{0} is larger.", input2);
+            } else
+            {
+                Console.WriteLine("{0} is larger.", input1);
+            };
 
-            //float price;
-            //if (isGoldCustomer)
-            //{
-            //    price = 19.95f;
-            //}
-            //else
-            //{
-            //    price = 29.95f;
-            //}
+            /*
+             Write a program and ask the user to enter the width and height
+             of an image. Then tell if the image is landscape or portrait.
+            */
+            Console.WriteLine("Please enter image height: ");
+            int height = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter image width: ");
+            int width = Int32.Parse(Console.ReadLine());
+            if(height > width)
+            {
+                Console.WriteLine("Your image is portrait dimensions.");
+            } else
+            {
+                Console.WriteLine("Your image is landscape dimensions.");
+            }
+            /*
+             Your job is to write a program for a speed camera. For simplicity,
+             ignore the details such as camera, sensors, etc and focus purely
+             on the logic. Write a program that asks the user to enter the
+             speed limit. Once set, the program asks for the speed of a car.
+             If the user enters a value less than the speed limit, program
+             should display Ok on the console. If the value is above the speed
+             limit, the program should calculate the number of demerit points.
+             For every 5km/hr above the speed limit, 1 demerit points should be
+             incurred and displayed on the console. If the number of demerit
+             points is above 12, the program should display License Suspended.
+             */
+            Console.WriteLine("Please enter the speed limit: ");
+            int speedLimit = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter your speed: ");
+            int speed = Int32.Parse(Console.ReadLine());
 
-            //ternary if/else
-            //float price = (isGoldCustomer) ? 19.95f : 29.95f;
+            int difference = speed - speedLimit;
 
-            //int hour = 10;
-
-            //if(hour > 0 && hour < 12)
-            //{
-            //    Console.WriteLine("It's morning.");
-            //} else if(hour >= 12 && hour < 18)
-            //{
-            //    Console.WriteLine("It's afternoon.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("It's evening.");
-            //}
-
+            if (difference >= 12)
+            {
+                Console.WriteLine("License Suspended");
+            } else if (difference < 12 && difference > 5)
+            {
+                Console.WriteLine("Two demerits issued");
+            } else if (difference > 0 && difference <= 5)
+            {
+                Console.WriteLine("One demerit issued");
+            } else
+            {
+                Console.WriteLine("Ok");
+            }
         }
     }
 }
