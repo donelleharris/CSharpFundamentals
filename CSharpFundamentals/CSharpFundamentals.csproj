@@ -40,6 +40,8 @@
     <Compile Include="ConditionalsExercises.cs" />
     <Compile Include="ControlFlow.cs" />
     <Compile Include="ControlFlowExercises.cs" />
+    <Compile Include="ArraysAndLists.cs" />
+    <Compile Include="ArraysAndListsExercises.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Math\" />
