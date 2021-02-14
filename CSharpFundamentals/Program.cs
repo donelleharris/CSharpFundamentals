@@ -3,83 +3,58 @@ using CSharpFundamentals.Math;
 
 namespace CSharpFundamentals
 {
-    //Enums lecture
-    //public enum ShippingMethod
-    //{
-    //    RegularAirMail = 1,
-    //    RegisteredAirMail = 2,
-    //    Express = 3
-    //}
     class Program
     {
         public static void Main(string[] args)
         {
-            /*
-             * Types:
-             *  Structures(value types) - primitive types, custom structures
-             *  Classes(reference types) - arrays, strings, custom classes
-            */
-            var a = 10;
-            var b = a;
-            b++;
-            Console.WriteLine(string.Format("a: {0}, b: {1}", a, b));
+            //switch statement
+            var season = Season.Autumn;
+            switch (season)
+            {
+                case Season.Autumn:
+                    Console.WriteLine("It's autumn and a beautiful season.");
+                    break;
+                case Season.Spring:
+                    Console.WriteLine("It's spring and a I am ready for summer.");
+                    break;
+                case Season.Summer:
+                    Console.WriteLine("It's summer! Let's go to the beach.");
+                    break;
+                default:
+                    Console.WriteLine("Winter! Maybe it will snow.");
+                    break;
+            }
 
-            var array1 = new int[3] { 1, 2, 3 };
-            var array2 = array1;
-            array2[0] = 0;
-            Console.WriteLine(array1[0]);
+            //conditional statements
+            //bool isGoldCustomer = true;
 
-            //Enum lecture
-            //var method = ShippingMethod.Express;
-            //Console.WriteLine((int)method);
+            //float price;
+            //if (isGoldCustomer)
+            //{
+            //    price = 19.95f;
+            //}
+            //else
+            //{
+            //    price = 29.95f;
+            //}
 
-            //var methodId = 3;
-            //Console.WriteLine((ShippingMethod)methodId);
-            //Console.WriteLine(method.ToString());
+            //ternary if/else
+            //float price = (isGoldCustomer) ? 19.95f : 29.95f;
 
-            //var methodName = "Express";
-            //var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            //int hour = 10;
 
-            //Strings Lecture
-            //var fName = "Donelle";
-            //var lName = "Brown";
-            //var fullName = fName + " " + lName;
-            //var myFullName = string.Format("My name is {0} {1}", fName, lName);
-            //var names = new string[3] { "John", "Jack", "Mary" };
-            //var formattedNames = string.Join(", ", names);
+            //if(hour > 0 && hour < 12)
+            //{
+            //    Console.WriteLine("It's morning.");
+            //} else if(hour >= 12 && hour < 18)
+            //{
+            //    Console.WriteLine("It's afternoon.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("It's evening.");
+            //}
 
-            //var text = "Hello John\nLook into the following paths\nc:\\folder1\\folder2\\folder3\\filename";
-            ////or...
-            //var formattedText = @"Hello John
-            //                    Look into the following paths
-            //                    c:\folder1\folder2\folder3\filename";
-
-
-            //Arrays Lecture
-            //var numbers = new int[3];
-            //numbers[0] = 1;
-
-            //Console.WriteLine(numbers[0]);
-            //Console.WriteLine(numbers[1]);
-            //Console.WriteLine(numbers[2]);
-
-            //var flags = new bool[3];
-            //flags[0] = true;
-
-            //Console.WriteLine(flags[0]);
-            //Console.WriteLine(flags[1]);
-
-            //var names = new string[3] { "Jack", "John", "Mary" };
-
-            //Classes lecture
-            //var john = new Person();
-            //john.FirstName = "John";
-            //john.LastName = "Smith";
-            //john.Introduce();
-
-            //Math.Calculator calculator = new Calculator();
-            //var result = calculator.Add(1, 2);
-            //Console.WriteLine(result);
         }
     }
 }
