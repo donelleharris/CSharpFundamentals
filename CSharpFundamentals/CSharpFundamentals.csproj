@@ -37,6 +37,9 @@
     <Compile Include="PrimitiveDataTypes.cs" />
     <Compile Include="Season.cs" />
     <Compile Include="Conditionals.cs" />
+    <Compile Include="ConditionalsExercises.cs" />
+    <Compile Include="ControlFlow.cs" />
+    <Compile Include="ControlFlowExercises.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Math\" />
