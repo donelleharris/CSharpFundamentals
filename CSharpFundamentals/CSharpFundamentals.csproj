@@ -44,6 +44,8 @@
     <Compile Include="ArraysAndListsExercises.cs" />
     <Compile Include="DateTime.cs" />
     <Compile Include="StringUtility.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="StringsExercises.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Math\" />
